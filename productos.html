@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos para el formulario de inicio de sesión */
+        .login-form {
+            display: none;
+        }
+        .login-form label {
+            display: block;
+            font-weight: bold;
+        }
+        .login-form input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .login-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .user-info {
+            display: none;
+        }
+    </style>
+    <title>Productos</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="computadora (1).png" alt="Logo de la empresa">
+                        <h1>Computer S.A de C.V</h1>
+                    </a>
+                </div>
+                <ul class="menu">
+                    <li><a href="acerca.html">Acerca de nosotros</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <!-- Área mejorada para el inicio de sesión -->
+                    <li id="login-menu"><a href="#" onclick="showLoginForm()"></a></li>
+                    <li class="user-info" id="user-menu">
+                        <a href="#">Bienvenido, <span id="user-name"></span></a>
+                        <button onclick="logout()">Cerrar Sesión</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="productos">
+        <div class="container">
+            <h2>Productos</h2>
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Buscar productos...">
+                <button type="submit">Buscar</button>
+            </form>
+            <table class="product-table">
+                <tr>
+                    <th>Producto</th>
+                    <th>Imagen</th>
+                    <th>Precio</th>
+                </tr>
+
+                <tr>
+                    <td>AUDIFONOS GAMER BLUETOOTH</td>
+                    <td><img src="image (1).png" alt="Producto 3"></td>
+                    <td>$12.00</td>
+                </tr>
+                <tr>
+                    <td>DISCO SOLIDO EXTERNO KINGSTON 2TB</td>
+                    <td><img src="image.jpg" alt="Producto 1"></td>
+                    <td>$199.00</td>
+                </tr>
+                <tr>
+                    <td>MEMORIA USB TIPO C KINGSTON 32GB</td>
+                    <td><img src="image (1).jpg" alt="Producto 2"></td>
+                    <td>$3.95</td>
+                </tr>
+                <tr>
+                    <td>TECLADO MULTIMEDIA KLIP XTREME</td>
+                    <td><img src="image.gif" alt="Producto 3"></td>
+                    <td>$12.00</td>
+                </tr>
+               
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Computer S.A de C.V</p>
+            <div class="equipo">
+                Daniel Alexander Aguilar Hernández <br>
+                Helen Guadalupe Ramirez Gomez <br>
+                Marcela Liliana Revelo Mendoza <br>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        function showLoginForm() {
+            const loginMenu = document.getElementById("login-menu");
+            const userMenu = document.getElementById("user-menu");
+
+            // Ocultar el menú de inicio de sesión y mostrar el formulario de inicio de sesión
+            loginMenu.style.display = "none";
+            userMenu.style.display = "none";
+            const loginForm = document.querySelector(".login-form");
+            loginForm.style.display = "block";
+        }
+
+        function updateUserName() {
+            const userNameInput = document.getElementById("user-name-input").value;
+            const userNameSpan = document.getElementById("user-name");
+            userNameSpan.textContent = userNameInput;
+
+            // Ocultar el formulario después de actualizar el nombre
+            const loginForm = document.querySelector(".login-form");
+            loginForm.style.display = "none";
+
+            // Mostrar el menú de usuario
+            const userMenu = document.getElementById("user-menu");
+            userMenu.style.display = "block";
+        }
+
+        function logout() {
+            // Puedes agregar aquí la lógica para cerrar la sesión
+            // Por ejemplo, borrar las cookies o la información de sesión.
+            // Luego, redirecciona al usuario a la página de inicio de sesión.
+            location.reload(); // Actualiza la página para simular el cierre de sesión.
+        }
+    </script>
+</body>
+</html>

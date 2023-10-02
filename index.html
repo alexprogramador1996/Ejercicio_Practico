@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ejercicio</title>
+    <style>
+        /* Estilos para el carrusel */
+        .swiper-container {
+            width: 100%;
+            height: 400px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            max-width: 200%;
+            max-height: 100%;
+        }
+
+        /* Estilos para las flechas de navegación (opcional) */
+        .swiper-button-next,
+        .swiper-button-prev {
+            font-size: 24px;
+            color: #fff;
+            background-color: #333;
+            border-radius: 50%;
+            padding: 10px;
+            position: absolute;
+        }
+
+        .swiper-button-next {
+            right: 10px;
+        }
+
+        .swiper-button-prev {
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="computadora (1).png" alt="Logo de la empresa">
+                        <h1>Computer S.A de C.V</h1>
+                    </a>
+                </div>
+                <ul class="menu">
+                    <li><a href="acerca.html">Acerca de nosotros</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="ordenador-portatil.png" alt="Imagen 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="anime-girl-computer-desktop-uhdpaper.com-hd-4.2477.jpg" alt="Imagen 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="HD-wallpaper-people-sitting-down-near-table-with-assorted-laptop-computers.jpg" alt="Imagen 3">
+                </div>
+                <!-- Agrega más imágenes según tus necesidades -->
+            </div>
+            <!-- Agrega las flechas de navegación (opcional) -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Computer S.A de C.V</p>
+            <div class="equipo">
+                Daniel Alexander Aguilar Hernández <br>
+                Helen Guadalupe Ramirez Gomez <br>
+                Marcela Liliana Revelo Mendoza <br>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mySwiper = new Swiper('.swiper-container', {
+                // Opciones de Swiper, consulta la documentación para personalizarlo aún más
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                loop: true, // Permite un bucle infinito de imágenes
+                autoplay: {
+                    delay: 5000, // Cambia de imagen cada 5 segundos (ajusta según lo desees)
+                },
+            });
+        });
+    </script>
+</body>
+</html>

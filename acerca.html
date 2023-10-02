@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Misión, Visión y Eslogan</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="computadora (1).png" alt="Logo de la empresa">
+                        <h1>Computer S.A de C.V</h1>
+                    </a>
+                </div>
+                <ul class="menu">
+                    <li><a href="acerca.html">Acerca de nosotros</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+ 
+
+<section id="mision-vision-eslogan">
+    <div class="container">
+        <center>
+        <h2>Misión, Visión y Eslogan</h2>
+    </center>
+
+        <div class="mission-vision-cards">
+            <!-- Tarjeta de Misión -->
+            <div class="mission-card animate__animated">
+                <h3>Misión</h3>
+                <img src="mision-cumplida.png" alt="Imagen de Misión">
+                <p>Nuestra misión es proporcionar productos y servicios de alta calidad que satisfagan las necesidades de nuestros clientes y mejoren su vida cotidiana.</p>
+            </div>
+
+            <!-- Tarjeta de Visión -->
+            <div class="vision-card animate__animated">
+                <h3>Visión</h3>
+                <img src="vision.png" alt="Imagen de Visión">
+                <p>Nuestra visión es ser líderes en la industria, innovando constantemente y brindando soluciones que marquen la diferencia en el mercado.</p>
+            </div>
+
+            <!-- Tarjeta de Eslogan -->
+            <div class="slogan-card animate__animated">
+                <h3>Eslogan</h3>
+                <img src="slogan.png" alt="Imagen de Slogan">
+                <p>"Innovación que transforma tu mundo."</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer>
+        <div class="container">
+            <p>© 2023 Computer S.A de C.V</p>
+            <div class="equipo">
+                Daniel Alexander Aguilar Hernández <br>
+                Helen Guadalupe Ramirez Gomez <br>
+                Marcela Liliana Revelo Mendoza <br>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".animate__animated").forEach(function(card) {
+                card.classList.add("animate__bounceIn");
+            });
+        });
+    </script>
+    
+</body>
+</html>
